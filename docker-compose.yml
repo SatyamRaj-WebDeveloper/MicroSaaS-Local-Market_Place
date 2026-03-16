@@ -1,0 +1,41 @@
+# microsaas-local/docker-compose.yml
+version: '3.8'
+
+services:
+  # 1. Next.js Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      # Tell the frontend how to reach the backend
+      - NEXT_PUBLIC_API_URL=http://localhost:5000/api 
+    depends_on:
+      - backend
+
+  # 2. Node/Express Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      # Tell the backend how to reach the database
+      - MONGODB_URI=mongodb://mongo:27017/microsaas
+      - PORT=5000
+    depends_on:
+      - mongo
+
+  # 3. MongoDB Database
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
