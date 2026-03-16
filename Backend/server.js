@@ -4,8 +4,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
-import vendorRoutes from './routes/vendorRoutes.js';   // NEW
-import productRoutes from './routes/productRoutes.js'; // NEW
+import vendorRoutes from './routes/vendorRoutes.js';   
+import productRoutes from './routes/productRoutes.js'; 
+import shopRoutes from './routes/shopRoutes.js'
 
 dotenv.config();
 connectDB();
@@ -15,8 +16,9 @@ app.use(cors());
 app.use(express.json()); 
 
 app.use('/api/auth', authRoutes);
-app.use('/api/vendors', vendorRoutes);   // NEW
-app.use('/api/products', productRoutes); // NEW
+app.use('/api/vendors', vendorRoutes);   
+app.use('/api/products', productRoutes); 
+app.use('/api/shops', shopRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Backend is running correctly with ES6!' });
