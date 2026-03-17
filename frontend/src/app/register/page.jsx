@@ -77,13 +77,13 @@ export default function RegisterPage() {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Owner Name</label>
+              <label className="block text-sm font-medium text-gray-700  mb-1">Owner Name</label>
               <div className="relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <User className="h-5 w-5 text-gray-400" />
                 </div>
-                <input type="text" name="name" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="Rahul Sharma" />
+                <input type="text" name="name"  required onChange={handleChange}
+                  className="pl-10 block w-full text-black border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="Rahul Sharma" />
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export default function RegisterPage() {
                   <Store className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="text" name="shopName" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="Sharma Kirana Store" />
+                  className="pl-10 block w-full border-gray-300 text-black  rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="Sharma Kirana Store" />
               </div>
             </div>
 
@@ -105,7 +105,7 @@ export default function RegisterPage() {
                   <Phone className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="tel" name="whatsappNumber" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="+91 9876543210" />
+                  className="pl-10 block w-full border-gray-300 text-black  rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="+91 9876543210" />
               </div>
             </div>
 
@@ -116,7 +116,7 @@ export default function RegisterPage() {
                   <Mail className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="email" name="email" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="you@example.com" />
+                  className="pl-10 block w-full border-gray-300 text-black  rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="you@example.com" />
               </div>
             </div>
 
@@ -127,7 +127,7 @@ export default function RegisterPage() {
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="password" name="password" required onChange={handleChange} minLength={6}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="••••••••" />
+                  className="pl-10 block w-full border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="••••••••" />
               </div>
             </div>
 
