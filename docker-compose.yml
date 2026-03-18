@@ -10,8 +10,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      # Tell the frontend how to reach the backend
       - NEXT_PUBLIC_API_URL=http://localhost:5000/api 
+      - INTERNAL_API_URL=http://backend:5000/api 
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=dnsbfjadsbfjanflmsjkdnfskjdoasjojns
     depends_on:
       - backend
 

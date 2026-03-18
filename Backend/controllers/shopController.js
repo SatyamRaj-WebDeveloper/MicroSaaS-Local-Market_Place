@@ -1,16 +1,11 @@
 // backend/controllers/shopController.js
-import Vendor from '../models/Vendor.js';
-import Product from '../models/Product.js';
+import Vendor from '../models/VendorModel.js';
+import Product from '../models/ProductModel.js';
 
-// @route GET /api/shops/:slug
-// @desc Get public vendor details and their available products
-// @access Public (No JWT required)
 export const getShopDetails = async (req, res) => {
   try {
     const { slug } = req.params;
 
-    // 1. Find the vendor by their unique slug
-    // We use .select() to hide sensitive info like passwords and emails from the public!
     const vendor = await Vendor.findOne({ shopSlug: slug }).select(
       'name shopName shopSlug whatsappNumber minimumOrderValue deliveryFee isOpen shopFrontImage'
     );

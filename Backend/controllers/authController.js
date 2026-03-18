@@ -1,4 +1,4 @@
-import Vendor from '../models/Vendor.js'; F
+import Vendor from '../models/VendorModel.js'
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 

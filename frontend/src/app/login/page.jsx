@@ -81,7 +81,7 @@ function LoginContent() {
                   <Mail className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="email" name="email" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="you@example.com" />
+                  className="pl-10 block w-full border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="you@example.com" />
               </div>
             </div>
 
@@ -92,7 +92,7 @@ function LoginContent() {
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input type="password" name="password" required onChange={handleChange}
-                  className="pl-10 block w-full border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="••••••••" />
+                  className="pl-10 block w-full border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm py-2.5 border transition-colors" placeholder="••••••••" />
               </div>
             </div>
 

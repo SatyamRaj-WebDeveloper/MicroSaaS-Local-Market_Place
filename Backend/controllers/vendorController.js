@@ -1,5 +1,5 @@
 
-import Vendor from '../models/Vendor.js';
+import Vendor from '../models/VendorModel.js';
 
 export const submitVerificationDocs = async (req, res) => {
   try {

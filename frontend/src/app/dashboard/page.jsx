@@ -59,7 +59,7 @@ export default function DashboardHome() {
         <p className="text-gray-500 mt-2 mb-6 max-w-md mx-auto">
           Start adding your inventory so customers can see what you have in stock as soon as you are verified.
         </p>
-        <Link href="/dashboard/products"
+        <Link href="/dashboard/product"
           className="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors">
           Add Your First Product <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
