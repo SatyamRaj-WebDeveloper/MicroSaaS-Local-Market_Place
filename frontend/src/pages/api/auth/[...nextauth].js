@@ -22,10 +22,12 @@ export const authOptions = {
           
           const user = await res.json();
           
+          // Added user.role here so NextAuth captures it from the backend
           if (res.ok && user && user.token) {
             return { 
               id: user._id, 
               shopSlug: user.shopSlug, 
+              role: user.role, 
               accessToken: user.token 
             };
           }
@@ -38,18 +40,22 @@ export const authOptions = {
     })
   ],
   callbacks: {
+    // Pass the role from the user object into the JWT token
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
         token.shopSlug = user.shopSlug;
+        token.role = user.role;
         token.accessToken = user.accessToken;
       }
       return token;
     },
+    // Pass the role from the JWT token into the active browser session
     async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id;
         session.user.shopSlug = token.shopSlug;
+        session.user.role = token.role;
         session.accessToken = token.accessToken;
       }
       return session;

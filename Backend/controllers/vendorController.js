@@ -27,8 +27,7 @@ export const submitVerificationDocs = async (req, res) => {
   }
 };
 
-// @route GET /api/vendors/me
-// @desc Get current vendor profile
+
 export const getVendorProfile = async (req, res) => {
   try {
     const vendor = await Vendor.findById(req.vendor._id).select('-password');

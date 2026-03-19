@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import vendorRoutes from './routes/vendorRoutes.js';   
 import productRoutes from './routes/productRoutes.js'; 
 import shopRoutes from './routes/shopRoutes.js'
+import adminRoutes from './routes/adminRoutes.js'
 
 dotenv.config();
 connectDB();
@@ -19,6 +20,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/vendors', vendorRoutes);   
 app.use('/api/products', productRoutes); 
 app.use('/api/shops', shopRoutes);
+app.use('/api/admin', adminRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Backend is running correctly with ES6!' });

@@ -44,6 +44,7 @@ export const loginVendor = async (req, res) => {
       return res.json({
         _id: vendor._id,
         shopSlug: vendor.shopSlug,
+        role: vendor.role,
         token: generateToken(vendor._id)
       });
     } else {

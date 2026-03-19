@@ -12,7 +12,12 @@ const vendorSchema = new mongoose.Schema({
     isOpen: { type: Boolean, default: true },
     isVerified: { type: Boolean, default: false },
     shopFrontImage: { type: String, default: '' },
-    idProofImage: { type: String, default: '' }
+    idProofImage: { type: String, default: '' },
+    role: { 
+        type: String, 
+        enum: ['vendor', 'admin'], 
+        default: 'vendor' 
+      },
 }, { timestamps: true });
 
 const Vendor = mongoose.model('Vendor', vendorSchema);
